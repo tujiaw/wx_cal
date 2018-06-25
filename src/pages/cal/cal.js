@@ -132,6 +132,10 @@ Page({
         return;
       }
 
+      if (!isNaN(curShow)) {
+        return;
+      }
+
       this.setData({ isExecute: true });
       const self = this;
       util.evaluateExpression(curShow, function(data) {
