@@ -1,0 +1,10 @@
+<view class="content">
+  <view class="screen">{{show}}</view>
+  <block wx:for="{{rows}}" wx:key="*this">
+    <view class="btnGroup">
+      <block wx:for="{{item.row}}" wx:key="*this">
+        <view class="item {{item.bgClass}}" data-id="{{item.data}}" bind:tap="onItemTap">{{item.text}}</view>
+      </block>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,19 @@
+/* pages/his/his.wxss */
+.content {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: grey;
+}
+
+.item {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #f78d1d;
+  margin: 10rpx;
+  padding: 10rpx;
+  border-radius: 5px;
+  color: #ffffff;
+}

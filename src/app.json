@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/cal/cal",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/his/his"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "简单计算器",
+    "navigationBarTextStyle": "black"
+  }
+}

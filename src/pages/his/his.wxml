@@ -1,0 +1,9 @@
+<!--pages/his/his.wxml-->
+
+<scroll-view  scroll-y class="content">
+<block wx:for="{{his}}" wx:key="*this">
+  <view class="item">
+  <text>{{item}}</text>
+  </view>
+</block>
+</scroll-view>
