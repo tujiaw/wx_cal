@@ -127,26 +127,31 @@ Page({
         url: '../his/his',
       })
     } else if (id === '=') {
-      if (this.data.isExecute) {
-        console.log('is execute...')
-        return;
-      }
-
       if (!isNaN(curShow)) {
         return;
       }
 
-      this.setData({ isExecute: true });
-      const self = this;
-      util.evaluateExpression(curShow, function(data) {
-        self.setData({ isExecute: false });
-        if (!isNaN(data)) {
-          self.setData({ show: data });
-          var his = wx.getStorageSync('his') || [];
-          his.push(curShow + '=' + data);
-          wx.setStorageSync('his', his);
-        }
-      });
+      // if (this.data.isExecute) {
+      //   console.log('is execute...')
+      //   return;
+      // }
+
+      // this.setData({ isExecute: true });
+      // const self = this;
+      // util.evaluateExpression(curShow, function(data) {
+      //   self.setData({ isExecute: false });
+      //   if (!isNaN(data)) {
+      //     self.setData({ show: data });
+      //     var his = wx.getStorageSync('his') || [];
+      //     his.push(curShow + '=' + data);
+      //     wx.setStorageSync('his', his);
+      //   }
+      // });
+      var data = util.calExpression(curShow)
+      this.setData({ show: data });
+      var his = wx.getStorageSync('his') || [];
+      his.push(curShow + '=' + data);
+      wx.setStorageSync('his', his);
     } else {
       if (this.data.show === '0' && '+-*/.'.indexOf(id) >= 0) {
         return;
